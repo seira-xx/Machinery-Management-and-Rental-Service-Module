@@ -2,13 +2,25 @@
 
 ## Project Title & Description
 
-The **PPAC Agricoop Management System** is a digital platform designed to to help Prosamapi Palestina Agriculture Cooperative with its operational challenges. The cooperative's reliance on a semi-manual data recording process often results in inefficiency, data inconsistency, and limited transparency. 
+The **PPAC Agricoop Management System** is a digital platform designed to to help Prosamapi Palestina Agriculture Cooperative with its operational challenges. The cooperative currently relies on pen and paper-based records and spreadsheets, which often result in inefficiency, inconsistent data management, delays in processing transactions, and limited transparency across operations.
+
+This project aims to improve the cooperative’s overall operational efficiency by digitizing and streamlining its core processes through a management system.
+
+This repository branch specifically focuses on the **Machinery Management and Rental Services Module**. The primary goal of the module is to help cooperative personnel efficiently manage machinery records, maintenance activities, and rental transactions. It provides a centralized system that to manage the rental process, manage the machinery registry that improves the monitoring of machinery availability and maintenance schedules.
+
+The module allows authorized users such as the Operation Manager, Cashier, Farmer, and Mechanic Head to perform role-specific tasks, which include the following:
+- Managing machinery records  
+- Monitoring and scheduling maintenance activities  
+- Processing, validating, and tracking rental requests  
+- Maintaining accurate and organized transaction records  
+
+Through this subsystem, the project aims to improve efficiency, consistency, accuracy, and transparency within the cooperative.
 
 This system contains 4 subsystems:
-* Farm Input and Output Management
-* Machinery Management and Rental Services
-* Cooperative Management
-* Financial Management
+* Farm Input and Output Management assigned to John Edward M. Montanez
+* Machinery Management and Rental Services assigned to Carl Louis M. Naval
+* Cooperative Management assigned to Rey Francis P. Morata
+* Financial Management assigned to Kian L. Lwin
 
 
 ---
