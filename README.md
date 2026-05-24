@@ -35,9 +35,8 @@ Follow these steps to set up the development environment locally:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/icebirbs/PPAC-AgriCoop-Management-System.git
-cd PPAC-AgriCoop-Management-System
-git checkout Machinery-Management-and-Rental-Services-Module
+git clone https://github.com/seira-xx/Machinery-Management-and-Rental-Service-Module.git
+cd Machinery-Management-and-Rental-Service-Module
 ```
 
 ### 2. Install Dependencies
