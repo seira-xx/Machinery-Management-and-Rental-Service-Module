@@ -16,13 +16,6 @@ The module allows authorized users such as the Operation Manager, Cashier, Farme
 
 Through this subsystem, the project aims to improve efficiency, consistency, accuracy, and transparency within the cooperative.
 
-This system contains 4 subsystems:
-* Farm Input and Output Management assigned to John Edward M. Montanez
-* Machinery Management and Rental Services assigned to Carl Louis M. Naval
-* Cooperative Management assigned to Rey Francis P. Morata
-* Financial Management assigned to Kian L. Lwin
-
-
 ---
 
 ## Tech Stack
@@ -43,7 +36,8 @@ Follow these steps to set up the development environment locally:
 
 ```bash
 git clone https://github.com/icebirbs/PPAC-AgriCoop-Management-System.git
-cd ppac-agricoop-management-system
+cd PPAC-AgriCoop-Management-System
+git checkout Machinery-Management-and-Rental-Services-Module
 ```
 
 ### 2. Install Dependencies
@@ -51,27 +45,37 @@ cd ppac-agricoop-management-system
 #### Backend
 
 ```bash
-cd server
+cd acms-backend
 npm install
 ```
 
 #### Frontend
 
 ```bash
-cd ../client
+cd ../acms-frontend
 npm install
 ```
 
 ### 3. Configure Environment Variables
 
-Create a `.env` file in the **server** directory and add the following:
+Create a `.env` file in the **acms-backend** directory and add the following:
 
 ```env
+# Database Configuration
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=ppac_db
+DB_PASSWORD=your_db_password
+DB_NAME=acms_db
+
+# Server Configuration
 PORT=5000
+
+# JWT Configuration -generated using crypto.randomBytes(32).toString('hex')
+JWT_SECRET=f77d808757e0ee74ef1bf79398f1cc10431d1e216d634544b6cf306baf8f4ec9
+
+# or generate your own using: node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+# JWT_SECRET=your_generated_jwt_secret
+
 ```
 
 ### 4. Set Up the Database
@@ -79,13 +83,14 @@ PORT=5000
 * Open MySQL and create a database:
 
 ```sql
-CREATE DATABASE ppac_db;
+CREATE DATABASE acms_db;
 ```
 
 * Import the provided SQL file (if available):
 
 ```bash
-mysql -u root -p ppac_db < database.sql
+# Navigate back to the root if needed, or target directly:
+mysql -u root -p acms_db < acms-backend/database/acms_db_dump.sql
 ```
 
 ### 5. Run the Application
@@ -93,31 +98,39 @@ mysql -u root -p ppac_db < database.sql
 #### Start Backend Server
 
 ```bash
-cd server
+cd acms-backend
 npm start
 ```
 
 #### Start Frontend
+#### Open new terminal
 
 ```bash
-cd client
+cd acms-frontend
 npm start
 ```
 
 The application should now be running at:
 
 * Frontend: `http://localhost:3000`
-* Backend: `http://localhost:5000`
+* Backend API: `http://localhost:5000`
+
+### 6. Test Credentials
+
+Use the following credentials to test the various role-based features of the system. The password for all test accounts is `123`.
+
+| Role | Username | Password |
+| :--- | :--- | :--- |
+| **Operation Manager** | `ope` | `123` |
+| **Mechanic Head** | `mec` | `123` |
+| **Cashier** | `cas` | `123` |
+| **Member** | `mem` | `123` |
 
 ---
 
 ## Contributors
 
-* **Project Manager:** John Edward M. Montañez – Oversees project development and coordination
-* **Fullstack Developer:** Rey Francis P. Morata – Manages the complete development lifecycle
 * **Fullstack Developer:** Carl Louis M. Naval – Manages the complete development lifecycle
-* **Fullstack Developer:** Kian L. Lwin – Manages the complete development lifecycle
-
 
 ---
 
