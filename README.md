@@ -127,7 +127,7 @@ Use the following credentials to test the various role-based features of the sys
 
 ### Important Testing Notes
 
-* **Creating Rental Requests:** When testing the rental creation process from the **Operation Manager** (`ope`) dashboard, the system requires searching for a registered member. Use the following name, as it is already included in the provided database dump:
+* **Creating Rental Requests:** When testing the rental creation process from the **Operation Manager** (`ope`) panel, the system requires searching for a registered member. Use the following name, as it is already included in the provided database dump:
   * **Member Name to Search:** `Joselito Sabella`
 ---
 
