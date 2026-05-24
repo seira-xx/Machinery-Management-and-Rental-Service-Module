@@ -125,6 +125,10 @@ Use the following credentials to test the various role-based features of the sys
 | **Cashier** | `cas` | `123` |
 | **Member** | `mem` | `123` |
 
+### Important Testing Notes
+
+* **Creating Rental Requests:** When testing the rental creation process from the **Operation Manager** (`ope`) dashboard, the system requires searching for a registered member. Use the following name, as it is already included in the provided database dump:
+  * **Member Name to Search:** `Joselito Sabella`
 ---
 
 ## Contributors
